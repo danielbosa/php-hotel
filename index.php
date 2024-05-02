@@ -3,6 +3,12 @@ include __DIR__ . "/Models/hotels.php";
 
 $cloneHotels = $hotels;
 
+if(isset($_GET['parking'])){
+  $cloneHotels = array_filter($hotels, function($hotel){
+    return $hotel['parking'] === true;
+  });
+};
+
 ?>
 
 
@@ -25,6 +31,23 @@ $cloneHotels = $hotels;
 
 </head>
 <body>
+  <header>
+    <form class="d-flex gap-2" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+      <input type="checkbox" name="parking" id="parking">
+      <label for="parking">Hotel con parcheggio</label>
+      <div>Stelle:</div>
+      <input type="radio" name="star" id="star" value="1">
+      <label for="parking">1+</label>
+      <input type="radio" name="star" id="star" value="2">
+      <label for="parking">2+</label>
+      <input type="radio" name="star" id="star" value="3">
+      <label for="parking">3+</label>
+      <input type="radio" name="star" id="star" value="4">
+      <label for="parking">4+</label>
+      <input type="radio" name="star" id="star" value="5">
+      <label for="parking">5</label>
+      <button type="submit">Applica filtri</button>
+  </header>
 
 <?php
 include __DIR__ . "/Views/table.php"
