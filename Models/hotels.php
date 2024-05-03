@@ -63,7 +63,7 @@
 
 function getHotels($hotels){
 
-  $cloneHotels = '';
+  $cloneHotels = $hotels;
 
   if(isset($_GET['star']) && isset($_GET['parking'])){
     $cloneHotels = array_filter($hotels, function($hotel){
@@ -82,6 +82,9 @@ function getHotels($hotels){
     return $hotel['vote'] >= $_GET['star'];
     });
   };
+
+  return $cloneHotels;
+
 }
 
 ?>
