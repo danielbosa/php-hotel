@@ -12,7 +12,6 @@
     <link grity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="js/script.js" type="text/javascript" defer></script>
     <title>PHP Hotels</title>
 
 </head>
@@ -23,15 +22,15 @@
         <input type="checkbox" name="parking" id="parking">
         <label for="parking">Hotel con parcheggio</label>
         <div>Stelle:</div>
-        <input type="radio" name="star" id="star" value="1">
+        <input type="radio" name="star" value="1">
         <label for="parking">1+</label>
-        <input type="radio" name="star" id="star" value="2">
+        <input type="radio" name="star" value="2">
         <label for="parking">2+</label>
-        <input type="radio" name="star" id="star" value="3">
+        <input type="radio" name="star" value="3">
         <label for="parking">3+</label>
-        <input type="radio" name="star" id="star" value="4">
+        <input type="radio" name="star" value="4">
         <label for="parking">4+</label>
-        <input type="radio" name="star" id="star" value="5">
+        <input type="radio" name="star" value="5">
         <label for="parking">5</label>
         <button type="submit">Applica filtri</button>
   </header>
