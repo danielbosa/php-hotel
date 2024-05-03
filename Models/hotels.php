@@ -39,7 +39,7 @@
         ],
 
     ];
-
+/*
     $cloneHotels = $hotels;
 
     if(isset($_GET['parking'])){
@@ -59,5 +59,29 @@
         return ($hotel['vote'] >= $_GET['star'] && $hotel['parking'] === true);
       });
     };
+*/
+
+function getHotels($hotels){
+
+  $cloneHotels = '';
+
+  if(isset($_GET['star']) && isset($_GET['parking'])){
+    $cloneHotels = array_filter($hotels, function($hotel){
+      return ($hotel['vote'] >= $_GET['star'] && $hotel['parking'] === true);
+    });
+  };
+
+  if(isset($_GET['parking'])){
+    $cloneHotels = array_filter($hotels, function($hotel){
+    return $hotel['parking'] === true;
+    });
+  };
+      
+  if(isset($_GET['star'])){
+    $cloneHotels = array_filter($hotels, function($hotel){
+    return $hotel['vote'] >= $_GET['star'];
+    });
+  };
+}
 
 ?>
