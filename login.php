@@ -5,10 +5,16 @@
 
 
 <div class="db-form">
-    <form id="login-form" action="login.php" method="POST">
+
+    <!-- !!!!! -->
+    <!-- ATTN: uso metodo GET perché con il post non funziona -->
+    <!-- SISTEMARE -->
+    <!-- !!!!! -->
+    
+    <form action="login.php" method="get">
         <h1 class="mb-3">Accedi al tuo account</h1>
         <div class="mb-3">
-            <label for="input-email" class="form-label">Inserici il tuo tuo indirizzo email</label>
+            <label for="input-email" class="form-label">Inserici il tuo indirizzo email</label>
             <input type="email" name="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="prova@prova.com">
         </div>
         <div class="mb-3">
