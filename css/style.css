@@ -8,7 +8,7 @@
 }
 
 /* background */
-.bg-blue{
+.bg-db{
     background-image: url("../Images/budapest-hotel.jpg");
     background-size: contain;
     height: 100vh;
@@ -55,4 +55,23 @@
     border-color: gray;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(128, 128, 128, 0.705);
+}
+
+/*logo img*/
+.logo-img{
+    border-radius: 30px;
+}
+
+.db-form .logo-img{
+    width: 50px;
+}
+
+header .logo-img{
+    width: 40px;
+}
+
+/* header */
+header{
+    background-color: var(--color-secondary-hard);
+    padding: 10px 30px;
 }

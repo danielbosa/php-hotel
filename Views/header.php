@@ -17,25 +17,27 @@
 </head>
 
 <body>
-    <div class="bg-blue">
-    <header class="d-flex justify-content-between mx-3">
+    <div class="bg-db">
+    <header class="d-flex justify-content-between">
         <?php if(isset($_SESSION['userId'])) : ?>
             <div>
-                <form class="d-flex gap-2" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
-                <input type="checkbox" name="parking" id="parking">
-                <label for="parking">Hotel con parcheggio</label>
-                <div>Stelle:</div>
-                <input type="radio" name="star" value="1">
-                <label for="parking">1+</label>
-                <input type="radio" name="star" value="2">
-                <label for="parking">2+</label>
-                <input type="radio" name="star" value="3">
-                <label for="parking">3+</label>
-                <input type="radio" name="star" value="4">
-                <label for="parking">4+</label>
-                <input type="radio" name="star" value="5">
-                <label for="parking">5</label>
-                <button type="submit" class="btn btn-primary">Applica filtri</button>
+                <img src="Images/logo.jpg" alt="logo" class="logo-img">
+            </div>
+            <div>
+                <form class="d-flex gap-2 align-items-center" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+                    <span>Filtri:</span>
+                    <input type="checkbox" name="parking" id="parking">
+                    <label for="parking">Hotel con parcheggio</label>
+                    <div>Stelle:</div>
+                    <select name="star" id="star">
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                        <option value="5">5</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Applica filtri</button>
+                </form>
             </div>
             <div>
                 <a href='logout.php' class='btn btn-danger'>Logout</a>

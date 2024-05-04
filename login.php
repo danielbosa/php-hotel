@@ -12,7 +12,13 @@
     <!-- !!!!! -->
     
     <form action="login.php" method="GET">
-        <h1 class="mb-3">Accedi al tuo account</h1>
+        <div class="d-flex justify-content-between">
+            <h1 class="mb-3">Accedi al tuo account</h1>
+            <div>
+                <img src="Images/logo.jpg" alt="logo" class="logo-img">
+            </div>
+        </div>
+        
         <div class="mb-3">
             <label for="email" class="form-label">Inserici il tuo indirizzo email</label>
             <input type="email" name="email" class="form-control" id="email" placeholder="prova@prova.com">
