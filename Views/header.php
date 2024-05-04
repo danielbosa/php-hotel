@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <div class="bg-blue">
     <header class="d-flex justify-content-between mx-3">
         <?php if(isset($_SESSION['userId'])) : ?>
             <div>

@@ -1,3 +1,19 @@
+/* colors */
+:root {
+	--color-primary: #314856;
+	--color-secondary: #ffe2c4;
+    --color-secondary-hard: #a67f48;
+    --color-intermediate: #798881;
+    --color-main: #ecbbad;
+}
+
+/* background */
+.bg-blue{
+    background-image: url("../Images/budapest-hotel.jpg");
+    background-size: contain;
+    height: 100vh;
+}
+
 /* Login page */
 .db-form{
     width: 500px;
@@ -6,25 +22,30 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: lightgrey;
+    background-color: var(--color-secondary);
     padding: 10px;
     border-radius: 0.375rem;
-    border: 1px solid gray;
+    border: 1px solid var(--color-secondary-hard);
+}
+
+.db-form h1,
+.db-form label{
+    color: var(--color-primary)
 }
 
 .db-form button{
     margin-left: auto;
     display: block;
-    background-color: grey;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
     padding: 0.375rem 0.75rem;
     border-radius: 0.375rem;
     border: 1px solid white;
 }
 
 .db-form button:hover{
-    background-color: white;
-    color: black;
+    background-color: var(--color-main);
+    color: var(--color-primary);
     border: 1px solid rgba(128, 128, 128, 0.705);
 }
 
