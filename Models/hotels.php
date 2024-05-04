@@ -69,15 +69,11 @@ function getHotels($hotels){
     $cloneHotels = array_filter($hotels, function($hotel){
       return ($hotel['vote'] >= $_GET['star'] && $hotel['parking'] === true);
     });
-  };
-
-  if(isset($_GET['parking'])){
+  } elseif (isset($_GET['parking'])){
     $cloneHotels = array_filter($hotels, function($hotel){
     return $hotel['parking'] === true;
     });
-  };
-      
-  if(isset($_GET['star'])){
+  } elseif (isset($_GET['star'])){
     $cloneHotels = array_filter($hotels, function($hotel){
     return $hotel['vote'] >= $_GET['star'];
     });

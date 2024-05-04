@@ -2,10 +2,8 @@
 session_start();
 
 include __DIR__ . '/../Models/user.php';
-//var_dump($users);
 
 if(!empty($_GET['email']) && !empty($_GET['password'])) {
-    var_dump($_GET['email']);
 //aggiungi controlli su sintassi: mail ha "@" e "."? 
 
 //dichiaro variabili per comodità di scrittura
@@ -18,11 +16,13 @@ if(!empty($_GET['email']) && !empty($_GET['password'])) {
     });
 
 //essendo un array, devo verificare che ci sia un elemento (login andato a buon fine) oppure no
-    if(count($authenticated) > 0) {
+    if(count($authenticated) == 1) {
         var_dump($authenticated);
         $user = array_shift($authenticated);
         $_SESSION['userId'] = $user['id'];
         $_SESSION['name'] = $user['name'];
-        //header('Location: index.php');
-    };
+        header('Location: index.php');
+    } else {
+        //errore: in caso in cui utente inserisce dati non presenti in database
+    }
 }
