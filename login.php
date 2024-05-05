@@ -11,7 +11,7 @@
     <!-- SISTEMARE -->
     <!-- !!!!! -->
     
-    <form action="login.php" method="GET">
+    <form action="login.php" method="POST">
         <div class="d-flex justify-content-between">
             <h1 class="mb-3">Accedi al tuo account</h1>
             <div>
@@ -27,7 +27,12 @@
             <label for="password" class="form-label">Password</label>
             <input type="password" name="password" class="form-control" id="password" placeholder="password qui">
         </div>
-        <button type="submit" class="db-btn">Accedi</button>
+        <div class="d-flex">
+            <?php if(isset($_SESSION['error'])) : ?>
+                <span class="db-error" style="color: red; align-self: center;">Attenzione: email o password errate</span>
+            <?php endif; ?>
+            <button type="submit" class="db-btn">Accedi</button>
+        </div>
     </form>
 </div>
 

@@ -18,29 +18,30 @@
 
 <body>
     <div class="bg-db">
-    <header class="d-flex justify-content-between">
-        <?php if(isset($_SESSION['userId'])) : ?>
-            <div>
-                <img src="Images/logo.jpg" alt="logo" class="logo-img">
-            </div>
-            <div>
-                <form class="d-flex gap-2 align-items-center" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
-                    <span>Filtri:</span>
-                    <input type="checkbox" name="parking" id="parking">
-                    <label for="parking">Hotel con parcheggio</label>
-                    <div>Stelle:</div>
-                    <select name="star" id="star">
-                        <option value="1">1+</option>
-                        <option value="2">2+</option>
-                        <option value="3">3+</option>
-                        <option value="4">4+</option>
-                        <option value="5">5</option>
-                    </select>
-                    <button type="submit" class="btn btn-primary">Applica filtri</button>
-                </form>
-            </div>
-            <div>
-                <a href='logout.php' class='btn btn-danger'>Logout</a>
-            </div>
+        <?php if(isset($_SESSION['header'])) : ?>
+            <header class="d-flex justify-content-between">
+                <div>
+                    <img src="Images/logo.jpg" alt="logo" class="logo-img">
+                </div>
+                <div class="d-flex align-items-center">
+                    <form class="d-flex gap-2 align-items-center" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="GET">
+                        <span>Filtri:</span>
+                        <input type="checkbox" name="parking" id="parking">
+                        <label for="parking">Hotel con parcheggio</label>
+                        <select name="star" id="star">
+                            <option value="1">1+</option>
+                            <option value="2">2+</option>
+                            <option value="3">3+</option>
+                            <option value="4">4+</option>
+                            <option value="5">5</option>
+                        </select>
+                        <div>Stelle</div>
+                        <button type="submit">Applica filtri</button>
+                    </form>
+                </div>
+                <div class="d-flex align-items-center">
+                    <a href='logout.php'>Logout</a>
+                </div>
+                
+            </header>
         <?php endif; ?>
-  </header>
